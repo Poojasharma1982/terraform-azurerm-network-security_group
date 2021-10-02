@@ -1,7 +1,7 @@
 resource "azurerm_network_security_group" "mynsg1" {
-  name                = "acceptanceTestSecurityGroup1"
-  location            = azurerm_resource_group.example.location
-  resource_group_name = azurerm_resource_group.example.name
+  name                = var.networksecuritygroup-name
+  location            = var.networksecuritygroup-location
+  resource_group_name = var.rg-name-nsg
 
   security_rule {
     name                       = "test123"
