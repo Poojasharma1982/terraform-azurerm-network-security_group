@@ -19,3 +19,7 @@ resource "azurerm_network_security_group" "mynsg1" {
     environment = "Production"
   }
 }
+resource "azurerm_subnet_network_security_group_association" "mynsg1association" {
+  subnet_id                 = var.subnet-id
+  network_security_group_id = azurerm_network_security_group.mynsg1.id
+}
