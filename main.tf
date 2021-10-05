@@ -1,6 +1,6 @@
 resource "azurerm_network_security_group" "mynsg1" {
   name                = var.networksecuritygroup-name
-  # location            = var.networksecuritygroup-location
+  location            = var.networksecuritygroup-location
    resource_group_name = var.rg-nsg-name
 
   security_rule {
